@@ -45,12 +45,6 @@ function App() {
 
   return (
     <div>
-      <header >
-        <h1>
-          Деловой и профессиональный английский язык для <br></br> студентов образовательной программы «Логистика»
-        </h1>
-      </header>
-
       {!showTest ? (
         <PDFViewer
         startPage={unit.startPage}
