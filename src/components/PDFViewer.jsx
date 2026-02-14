@@ -34,19 +34,14 @@ export default function PDFViewer({
   const zoomOut = () =>
     setScale((s) => Math.max(s - 0.2, 0.8));
 
-  const currentUnit = units.find(
-    (u) => pageNumber === u.startPage
-  );
+  const currentUnit = units.find((u, index) => {
+  const nextUnit = units[index + 1];
 
+  const start = u.startPage;
+  const end = nextUnit ? nextUnit.startPage - 1 : numPages;
 
-// const currentUnit = units.find((u, index) => {
-//   const nextUnit = units[index + 1];
-
-//   const start = u.startPage;
-//   const end = nextUnit ? nextUnit.startPage - 1 : numPages;
-
-//   return pageNumber >= start && pageNumber <= end;
-// });
+  return pageNumber >= start && pageNumber <= end;
+});
 
   const handlers = useSwipeable({
     // onSwipedLeft: () => nextPage(),
@@ -163,17 +158,14 @@ export default function PDFViewer({
             />
           </Document>
 
-          {currentUnit &&
-            pageNumber === currentUnit.startPage && (
+
+            {currentUnit && (
               <div className={styles.overlay}>
                 <button
                   className={styles.unitTestBtn}
-                  onClick={() =>
-                    onUnitTestClick(currentUnit.id)
-                  }
+                  onClick={() => onUnitTestClick(currentUnit.id)}
                 >
-                  Перейти к тесту по теме:{" "}
-                  {currentUnit.title}
+                  Перейти к тесту по теме: {currentUnit.title}
                 </button>
               </div>
             )}
@@ -182,18 +174,6 @@ export default function PDFViewer({
 
       {/* ===== TOOLBAR ===== */}
       <div className={styles.toolbar}>
-        {/* <button onClick={prevPage}>
-          ←
-        </button>
-
-        <span>
-          {pageNumber} / {numPages || "--"}
-        </span>
-
-        <button onClick={nextPage}>
-          →
-        </button> */}
-
         <button onClick={prevPage}> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg> </button> <span>{pageNumber} / {numPages || "--"}</span> <button onClick={nextPage}><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></button>
 
         <button
