@@ -10,7 +10,6 @@
 }
 
 .questionCard {
-//   background-color: var(--bg-color);
   background-color: var( --toolbar-bg);
   padding: 20px;
   margin-bottom: 20px;
@@ -51,6 +50,7 @@
 
 .correct {
   background: #2e7d32;
+  color: white;
 }
 
 .wrong {
