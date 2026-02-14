@@ -1,0 +1,93 @@
+.testWrapper {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.questionCard {
+//   background-color: var(--bg-color);
+  background-color: var( --toolbar-bg);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+  h4 {
+      color: var(--text-color);
+  }
+}
+
+.question {
+  margin-bottom: 15px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--text-color);
+}
+
+.option {
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.option input {
+  margin-right: 8px;
+}
+
+.selected {
+  background: #3f51b5;
+  color: white;
+}
+
+.correct {
+  background: #2e7d32;
+}
+
+.wrong {
+  background: #c62828;
+}
+
+.submitBtn {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #3f51b5;
+  color: white;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background: #5c6bc0;
+}
+
+.resultBox {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.backBtn {
+  margin-top: 15px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #444;
+  color: white;
+  cursor: pointer;
+}
+
+.backBtn:hover {
+  background: #666;
+}

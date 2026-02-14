@@ -1,13 +1,93 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --radius10: 10px;
+  --radius15: 15px;
+  --radius17: 17px;
+  --radius20: 20px;
+  --radius25: 25px;
+  --radius50p: 50%;
+  --font24: 24px;
+  --font21: 21px;
+  --font20: 20px;
+  --font19: 19px;
+  --font18: 18px;
+  --font17: 17px;
+  --font16: 16px;
+  --font15: 15px;
+  --paddingHome: 38px 20px;
+}
+
+::-webkit-scrollbar {
+  width: 0.78vw;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #686868;
+  -webkit-border-radius: 1.17vw;
+  border-radius: 1.17vw;
+}
+
+ ::-webkit-scrollbar-track {
+  background: transparent;
+} 
+ html,
+body {
+  overflow-x: hidden;
+} 
+
+body {
+  font-family: Segoe UI, Montserrat, sans-serif;
+  font-weight: 400;
+  overflow-y: overlay;
+  scroll-behavior: smooth;
+  position: relative;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+h1 {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 26px;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+p {
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  pointer-events: none;
+}
+
+
+@media (max-width: 768px) {
+.textLayer { 
+  height: auto !important;
+}
+
+.annotationLayer {
+    height: auto !important;
+}
 }
