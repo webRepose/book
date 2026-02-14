@@ -47,8 +47,6 @@ body {
 body {
   font-family: Segoe UI, Montserrat, sans-serif;
   font-weight: 400;
-  overflow-y: overlay;
-  scroll-behavior: smooth;
   position: relative;
   height: 100vh;
 }

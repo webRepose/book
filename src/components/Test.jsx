@@ -42,7 +42,7 @@ Array.from(unit).forEach((ee)=>{
 
   return (
     <div className={styles.testWrapper}>
-      <h2 className={styles.title}>Test {e}</h2>
+      <h2 className={styles.title}>Тест {e}</h2>
 
       {questions.map((q, qIndex) => (
         <div key={qIndex} className={styles.questionCard}>

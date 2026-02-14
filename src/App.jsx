@@ -36,6 +36,12 @@ function App() {
     );
   }, [selectedUnit, pageNumber]);
 
+  useEffect(() => {
+  if (showTest) {
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }
+}, [showTest]);
 
   return (
     <div>

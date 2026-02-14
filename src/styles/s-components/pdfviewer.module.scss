@@ -15,11 +15,17 @@
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      height: 70vh;
-          margin-top: 20px;
+      height: 100vh;
+      margin-top: 20px;
+
+      div {
+        margin-bottom: 20px;
+      }
 
 
       button {
+        width: -webkit-fill-available;
+        margin-bottom: 5px;
         padding: 8px 20px;
         display: block;
         font-size: 18px;
