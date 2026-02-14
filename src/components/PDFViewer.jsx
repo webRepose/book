@@ -22,8 +22,11 @@ export default function PDFViewer({
 
   const onLoadSuccess = ({ numPages }) => setNumPages(numPages);
 
-  const nextPage = () =>
+  const nextPage = () => {
     onPageChange(Math.min(pageNumber + 1, numPages));
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }
 
   const prevPage = () =>
     onPageChange(Math.max(pageNumber - 1, 1));
