@@ -28,10 +28,10 @@ export default function PDFViewer({
   const zoomOut = () => setScale(s => Math.max(s - 0.2, 0.8));
 
   const handlers = useSwipeable({
-  onSwipedLeft: () => nextPage(),
-  onSwipedRight: () => prevPage(),
-  preventDefaultTouchmoveEvent: true,
-  trackMouse: true
+  // onSwipedLeft: () => nextPage(),
+  // onSwipedRight: () => prevPage(),
+  // preventDefaultTouchmoveEvent: true,
+  // trackMouse: true
 });
 
   return (
