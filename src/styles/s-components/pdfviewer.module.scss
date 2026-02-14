@@ -183,16 +183,14 @@
     }
 
     .overlay {
-      bottom: 8px;
-      right: 8px;
-      left: 8px;
+      position: static;
       text-align: center;
     }
 
     .unitTestBtn {
       width: 100%;
-      padding: 2px;
-      font-size: 12px;
+      padding: 10px;
+      font-size: 14px;
     }
   }
 }
