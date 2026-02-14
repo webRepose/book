@@ -53,6 +53,7 @@ function App() {
         onUnitTestClick={(unitId) => {
           setSelectedUnit(unitId);
           setShowTest(true);
+          document.body.style.display = "block";
         }}
         units={units}
         toggleTheme={toggleTheme}
@@ -62,7 +63,10 @@ function App() {
         <Test
         questions={tests[selectedUnit]}
         unitKey={selectedUnit}
-        onBack={() => setShowTest(false)}
+        onBack={() => {
+          window.innerWidth <= 1020 && (document.body.style.display = "flex")
+          setShowTest(false)}
+        }
         unit={selectedUnit}
         />
       )}
