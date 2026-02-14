@@ -2,7 +2,7 @@
   "short_name": "Ebook English",
   "name": "Ebook English",
   
-  "/img/icons": [
+  "icons": [
     {
       "src": "/img/windows11/SmallTile.scale-100.png",
       "sizes": "71x71"
