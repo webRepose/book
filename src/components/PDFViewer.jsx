@@ -51,7 +51,6 @@ export default function PDFViewer({
     // onSwipedRight: () => prevPage(),
   });
 
-  console.log(pageNumber)
 
   return (
     <div {...handlers} className={styles.viewerWrapper}>
