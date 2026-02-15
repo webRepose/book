@@ -51,6 +51,8 @@ export default function PDFViewer({
     // onSwipedRight: () => prevPage(),
   });
 
+  console.log(pageNumber)
+
   return (
     <div {...handlers} className={styles.viewerWrapper}>
       <div className={styles.viewerWrapper_all}>
@@ -162,7 +164,9 @@ export default function PDFViewer({
           </Document>
 
 
-            {currentUnit && (
+        {
+          pageNumber >= 4 &&
+              currentUnit && (
               <div className={styles.overlay}>
                 <button
                   className={styles.unitTestBtn}
@@ -171,7 +175,8 @@ export default function PDFViewer({
                   Перейти к тесту по теме: {currentUnit.title}
                 </button>
               </div>
-            )}
+            )
+        }
         </div>
       </div>
 
